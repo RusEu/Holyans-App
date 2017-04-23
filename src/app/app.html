@@ -1,0 +1,63 @@
+<ion-toolbar color='light'>
+    <button ion-button menuToggle="leftMenu">
+        <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title text-center>
+      <img height="40"
+           src="http://storage.dobuy.es/holyans/static/img/logo.png"/>
+    </ion-title>
+    <ion-buttons start>
+        <button ion-button menuToggle="rightMenu">
+            <ion-icon name="person"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+<ion-menu [content]="content" side="left" id="leftMenu">
+  <ion-content>
+    <ion-card padding>
+      <img height="50px"
+           class="logo"
+           src="http://storage.dobuy.es/holyans/static/img/logo.png"/>
+    </ion-card>
+    <ion-list margin-top>
+      <button ion-item detail-push>
+        Sobre nosotros
+      </button>
+      <button ion-item detail-push>
+        Buscar
+      </button>
+      <button ion-item detail-push>
+        Calendar
+      </button>
+      <button ion-item detail-push>
+        Mensajes
+      </button>
+      <button ion-item detail-push>
+        Contactos
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-menu [content]="content" side="right" id="rightMenu">
+  <ion-content>
+    <ion-card>
+      <img src="http://www.hbc333.com/data/out/190/47476486-profile-pictures.png"
+           class="profile-picture"/>
+    </ion-card>
+    <ion-list>
+      <button ion-item detail-push>
+        Datos Personales
+      </button>
+      <button ion-item detail-push>
+        Servicios y Precios
+      </button>
+      <button ion-item detail-push>
+        Descripcion y Detalles
+      </button>
+      <button ion-item detail-push>
+        Galeria Foto
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
